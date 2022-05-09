@@ -41,16 +41,7 @@ function QuestionList() {
       })
   }
 
-  function logQuestions(){
-    
-    fetch("http://localhost:4000/questions")
-      .then((r) => r.json())
-      .then((q) => {
-        console.log(q)
-      });
-  }
-
-
+  
   function handleDeleteQuestion(id) {
     fetch(`http://localhost:4000/questions/${id}`, {
       method: "DELETE",
@@ -71,7 +62,7 @@ function QuestionList() {
   ))
   return (
     <section>
-      <button onClick={logQuestions}/>
+     
       <h1>Quiz Questions</h1>
       <ul>
         {questionItems}
